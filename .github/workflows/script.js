@@ -1,18 +1,23 @@
+document.addEventListener('DOMContentLoaded', function () {
+    getCatFact();
+  });
+  
+  // Event listener for "Get New Fact" button
+  document.getElementById('newFactButton').addEventListener('click', function () {
+    getCatFact();
+  });
+// Function to fetch a random cat fact from the Cat Facts API
 function getCatFact() {
-  // API URL for Cat Facts
-  var apiUrl = "https://catfact.ninja/fact";
-
-  // Fetch cat fact from the API
-  fetch(apiUrl)
+    fetch('https://catfact.ninja/fact')
       .then(response => response.json())
       .then(data => {
-          // Display the cat fact
-          var factContainer = document.getElementById("fact-container");
-          factContainer.innerHTML = "<p>" + data.fact + "</p>";
+        const catFactElement = document.getElementById('catFact');
+        catFactElement.textContent = data.fact;
       })
-      
-      .catch(error => console.error('Error fetching cat fact:', error));
-}
+      .catch(error => {
+        console.error('Error fetching cat fact:', error);
+      });
+  }  
 // Event listener for "Like" button
 document.getElementById('likeButton').addEventListener('click', function () {
     alert('Liked!');
@@ -30,6 +35,6 @@ function addComment() {
       const commentItem = document.createElement('li');
       commentItem.textContent = commentInput.value;
       commentsList.appendChild(commentItem);
-      commentInput.value = ''; // Clear the input field
+      commentInput.value = '';
     }
   }
