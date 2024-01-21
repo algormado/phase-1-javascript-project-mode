@@ -6,16 +6,11 @@ body {
     background-position: center;
     font-family: Arial, sans-serif;
     color: #ffffff;
-    button {
-        font-size: 5px;
-        color-scheme: blue;
-        padding-left: 20px;
-        font-weight: bold;
   }
   .content {
     padding: 20px;
     text-align: center;
-    
-
-    }
+  }
+  .card {
+    margin-bottom: 20px;
   }
