@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cat Facts App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Facts</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1 class="mt-4 mb-4">Cat Facts App</h1>
-    
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Random Cat Fact</h5>
-        <p class="card-text" id="catFact">Loading...</p>
-        <script src="app.js"></script>
-        <button onclick="getRandomCatFact()" class="btn btn-primary" id="getFactBtn">Get Another Fact</button>
-      </div>
-<script src="app.js"></script>
+    <h1>Cat Facts</h1>
+
+    <button onclick="getCatFact()">Get Cat Fact</button>
+
+    <div id="fact-container"></div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
+
+
